@@ -14,12 +14,10 @@
 
     --accent: #2457a7;
     --accent-dark: #183f7e;
-    --accent-soft: #eef4fc;
 
     --max-width: 1120px;
 
     --radius-small: 8px;
-    --radius-medium: 14px;
     --radius-large: 22px;
 }
 
@@ -40,7 +38,6 @@ body {
     margin: 0;
 
     background: var(--background);
-
     color: var(--text-primary);
 
     font-family:
@@ -51,12 +48,14 @@ body {
         "Helvetica Neue",
         Arial,
         "Noto Sans",
+        "Noto Sans JP",
         sans-serif;
 
     font-size: 16px;
     line-height: 1.7;
 
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 
@@ -83,8 +82,12 @@ h4 {
     margin-top: 0;
 
     line-height: 1.25;
-
     letter-spacing: -0.025em;
+}
+
+
+section[id] {
+    scroll-margin-top: 90px;
 }
 
 
@@ -107,9 +110,12 @@ h4 {
     top: 0;
     z-index: 100;
 
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 0.94);
 
     border-bottom: 1px solid var(--border);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 
@@ -125,6 +131,8 @@ h4 {
 
 
 .site-name {
+    flex: 0 0 auto;
+
     text-decoration: none;
 
     font-size: 1rem;
@@ -193,8 +201,6 @@ h4 {
 }
 
 
-/* 写真を用意するまで使うモック */
-
 .profile-photo--mock {
     display: grid;
     place-items: center;
@@ -212,6 +218,8 @@ h4 {
     font-weight: 700;
 
     letter-spacing: -0.06em;
+
+    user-select: none;
 }
 
 
@@ -297,19 +305,10 @@ h4 {
 
     font-size: 0.92rem;
     font-weight: 600;
-}
 
-
-.button-primary {
-    background: var(--text-primary);
-
-    color: #ffffff;
-}
-
-
-.button-primary:hover,
-.button-primary:focus-visible {
-    background: #30333a;
+    transition:
+        background-color 120ms ease,
+        border-color 120ms ease;
 }
 
 
@@ -325,6 +324,7 @@ h4 {
 .button-secondary:hover,
 .button-secondary:focus-visible {
     background: var(--background-alt);
+    border-color: #cfd4db;
 }
 
 
@@ -400,8 +400,6 @@ h4 {
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
 
-    gap: 0;
-
     border-top: 1px solid var(--border);
 }
 
@@ -453,7 +451,7 @@ h4 {
 ========================================================= */
 
 .publication-category + .publication-category {
-    margin-top: 72px;
+    margin-top: 80px;
 }
 
 
@@ -481,7 +479,10 @@ h4 {
     letter-spacing: 0.05em;
 }
 
+
 .publication {
+    max-width: 900px;
+
     padding:
         34px
         0;
@@ -492,11 +493,6 @@ h4 {
 
 .publication:last-child {
     border-bottom: 1px solid var(--border);
-}
-
-
-.publication-main {
-    max-width: 850px;
 }
 
 
@@ -515,6 +511,8 @@ h4 {
 
 
 .publication h4 {
+    max-width: 820px;
+
     margin-bottom: 12px;
 
     font-size:
@@ -535,8 +533,15 @@ h4 {
 }
 
 
+.publication-authors strong {
+    color: var(--text-primary);
+
+    font-weight: 700;
+}
+
+
 .publication-venue {
-    margin-bottom: 14px;
+    margin-bottom: 0;
 
     color: var(--text-secondary);
 
@@ -545,38 +550,8 @@ h4 {
 }
 
 
-.publication-links {
-    display: flex;
-
-    gap: 20px;
-}
-
-
-.text-link {
-    color: var(--accent);
-
-    text-decoration: none;
-
-    font-size: 0.9rem;
-    font-weight: 650;
-}
-
-
-.text-link::after {
-    content: " ↗";
-}
-
-
-.text-link:hover,
-.text-link:focus-visible {
-    color: var(--accent-dark);
-
-    text-decoration: underline;
-}
-
-
 /* =========================================================
-   Education Timeline
+   Education
 ========================================================= */
 
 .timeline {
@@ -697,23 +672,38 @@ h4 {
 }
 
 
-.contact-row a {
-    color: #ffffff;
-
-    text-decoration: none;
-}
-
-
-.contact-row a:hover,
-.contact-row a:focus-visible {
-    text-decoration: underline;
-}
-
-
 .contact-row p {
     margin: 0;
 
     color: #ffffff;
+}
+
+
+.contact-sub-link {
+    display: inline-block;
+
+    margin-top: 7px;
+
+    color: #b9bec8;
+
+    font-size: 0.86rem;
+
+    text-decoration: underline;
+    text-decoration-color: rgba(185, 190, 200, 0.55);
+    text-underline-offset: 3px;
+}
+
+
+.contact-sub-link::after {
+    content: " ↗";
+}
+
+
+.contact-sub-link:hover,
+.contact-sub-link:focus-visible {
+    color: #ffffff;
+
+    text-decoration-color: #ffffff;
 }
 
 
@@ -759,6 +749,15 @@ a:focus-visible {
         rgba(36, 87, 167, 0.35);
 
     outline-offset: 4px;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
 }
 
 
@@ -835,6 +834,11 @@ a:focus-visible {
     }
 
 
+    section[id] {
+        scroll-margin-top: 24px;
+    }
+
+
     .site-header {
         position: static;
     }
@@ -868,6 +872,8 @@ a:focus-visible {
         overflow-x: auto;
 
         padding-bottom: 4px;
+
+        scrollbar-width: thin;
     }
 
 
@@ -919,6 +925,18 @@ a:focus-visible {
     .section {
         padding:
             72px
+            0;
+    }
+
+
+    .publication-category + .publication-category {
+        margin-top: 64px;
+    }
+
+
+    .publication {
+        padding:
+            28px
             0;
     }
 
