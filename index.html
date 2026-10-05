@@ -1,17 +1,457 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>main</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Kotarou Saku — Ph.D. student at Tottori University working on computer vision, visual representation learning, and agricultural phenotyping."
+    >
+
+    <title>Kotarou Saku | Tottori University</title>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <h1>Kotarou Saku</h1>
 
-    <p>Ph.D. Student</p>
-    <p>Tottori University, Japan</p>
+    <!-- =========================================================
+         Header
+    ========================================================== -->
 
-    <p>
-        Email: D26T5003Z'@edu.tottori-u.ac.jp'
-    </p>
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a class="site-name" href="#top">
+                Kotarou Saku
+            </a>
+
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#publications">Publications</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main id="top">
+
+        <!-- =====================================================
+             Hero / Profile
+        ====================================================== -->
+
+        <section class="hero" id="about">
+            <div class="container hero-grid">
+
+                <!--
+                    MOCK PROFILE IMAGE
+
+                    写真を用意したら、この div を削除して、
+
+                    <img
+                        src="./assets/profile.jpg"
+                        alt="Portrait of Kotarou Saku"
+                        class="profile-photo"
+                    >
+
+                    に置き換えてください。
+                -->
+
+                <div
+                    class="profile-photo profile-photo--mock"
+                    aria-label="Placeholder profile image"
+                >
+                    KS
+                </div>
+
+
+                <div class="hero-content">
+
+                    <p class="eyebrow">
+                        Ph.D. Student · Tottori University
+                    </p>
+
+                    <h1>Kotarou Saku</h1>
+
+                    <p class="research-fields">
+                        Computer Vision · Visual Representation Learning · Agricultural Phenotyping
+                    </p>
+
+                    <p class="hero-description">
+                        I am a Ph.D. student at Tottori University working on
+                        computer vision and image processing.
+                        My research focuses on extracting plant traits from RGB
+                        images and developing visual recognition methods that
+                        incorporate domain-specific knowledge.
+                    </p>
+
+                    <div class="profile-links">
+
+                        <a
+                            href="mailto:YOUR_EMAIL@edu.tottori-u.ac.jp"
+                            class="button button-primary"
+                        >
+                            Email
+                        </a>
+
+                        <a
+                            href="https://github.com/YOUR_USERNAME"
+                            class="button button-secondary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
+
+                        <!--
+                        Google Scholarを作成したら有効化
+
+                        <a
+                            href="YOUR_GOOGLE_SCHOLAR_URL"
+                            class="button button-secondary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Google Scholar
+                        </a>
+                        -->
+
+                        <!--
+                        ORCIDを作成したら有効化
+
+                        <a
+                            href="YOUR_ORCID_URL"
+                            class="button button-secondary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            ORCID
+                        </a>
+                        -->
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             Research
+        ====================================================== -->
+
+        <section class="section" id="research">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">Research</p>
+                    <h2>Research Interests</h2>
+                    <p class="section-intro">
+                        My research explores computer vision methods for
+                        understanding plant morphology and phenotypic traits
+                        from visual observations.
+                    </p>
+                </div>
+
+
+                <div class="research-grid">
+
+                    <article class="research-item">
+                        <p class="research-number">01</p>
+
+                        <h3>
+                            Image-based Plant Phenotyping
+                        </h3>
+
+                        <p>
+                            Estimating plant traits from RGB images with an
+                            emphasis on non-destructive and practical
+                            phenotyping in field environments.
+                        </p>
+                    </article>
+
+
+                    <article class="research-item">
+                        <p class="research-number">02</p>
+
+                        <h3>
+                            Domain Knowledge for Visual Recognition
+                        </h3>
+
+                        <p>
+                            Incorporating domain-specific structural knowledge
+                            into visual recognition while reducing the need for
+                            dense manual annotations.
+                        </p>
+                    </article>
+
+
+                    <article class="research-item">
+                        <p class="research-number">03</p>
+
+                        <h3>
+                            Visual Representation Learning
+                        </h3>
+
+                        <p>
+                            Investigating how representations from visual
+                            foundation models can be adapted to regression and
+                            fine-grained prediction tasks.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             Publications
+        ====================================================== -->
+
+        <section class="section section-alt" id="publications">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">Publications</p>
+                    <h2>Selected Publications</h2>
+
+                    <p class="section-intro">
+                        Publications and conference presentations related to
+                        computer vision and agricultural image analysis.
+                    </p>
+                </div>
+
+
+                <div class="publication-year">
+                    <h3>2026</h3>
+
+
+                    <!-- =========================================
+                         ACCV Workshop
+                         ↓ 正式タイトルに置き換えてください
+                    ========================================== -->
+
+                    <article class="publication">
+
+                        <div class="publication-main">
+
+                            <p class="publication-type">
+                                International Workshop
+                            </p>
+
+                            <h4>
+                                Paper Title for the ACCV 2026 Workshop
+                            </h4>
+
+                            <p class="publication-authors">
+                                <strong>Kotarou Saku</strong>,
+                                Coauthor A,
+                                Coauthor B,
+                                Coauthor C
+                            </p>
+
+                            <p class="publication-venue">
+                                Subspaces in the Era of Foundation Models,
+                                ACCV 2026 Workshop
+                            </p>
+
+                            <div class="publication-links">
+
+                                <!--
+                                OpenReview URLを入れてください
+                                -->
+
+                                <a
+                                    href="#"
+                                    class="text-link"
+                                >
+                                    OpenReview
+                                </a>
+
+                                <!--
+                                PDFを公開する場合
+
+                                <a
+                                    href="./assets/papers/accv2026.pdf"
+                                    class="text-link"
+                                >
+                                    PDF
+                                </a>
+                                -->
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================================
+                         MIRU
+                    ========================================== -->
+
+                    <article class="publication">
+
+                        <div class="publication-main">
+
+                            <p class="publication-type">
+                                Domestic Conference
+                            </p>
+
+                            <h4>
+                                圃場で撮影されたムギ穂画像を用いた穀粒数・粒大推定の精度検証
+                            </h4>
+
+                            <p class="publication-authors">
+                                <strong>Kotarou Saku</strong>,
+                                Coauthor A,
+                                Coauthor B
+                            </p>
+
+                            <p class="publication-venue">
+                                MIRU 2026
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             Education
+        ====================================================== -->
+
+        <section class="section" id="education">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">Background</p>
+                    <h2>Education</h2>
+                </div>
+
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-date">
+                            2026 — Present
+                        </div>
+
+                        <div class="timeline-content">
+                            <h3>Ph.D. Student</h3>
+                            <p>Tottori University, Japan</p>
+                        </div>
+
+                    </div>
+
+
+                    <!--
+                    修士課程情報を確認してから追加してください。
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-date">
+                            20XX — 2026
+                        </div>
+
+                        <div class="timeline-content">
+                            <h3>Master of Engineering</h3>
+                            <p>Tottori University, Japan</p>
+                        </div>
+
+                    </div>
+                    -->
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             Contact
+        ====================================================== -->
+
+        <section class="section contact-section" id="contact">
+            <div class="container">
+
+                <div class="contact-grid">
+
+                    <div>
+                        <p class="section-label">Contact</p>
+
+                        <h2>
+                            Get in touch
+                        </h2>
+
+                        <p class="contact-description">
+                            For research-related inquiries, please contact me
+                            by email.
+                        </p>
+                    </div>
+
+
+                    <div class="contact-details">
+
+                        <div class="contact-row">
+                            <span>Email</span>
+
+                            <a href="mailto:YOUR_EMAIL@edu.tottori-u.ac.jp">
+                                YOUR_EMAIL@edu.tottori-u.ac.jp
+                            </a>
+                        </div>
+
+
+                        <div class="contact-row">
+                            <span>Affiliation</span>
+
+                            <p>
+                                Tottori University<br>
+                                Japan
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         Footer
+    ========================================================== -->
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+
+            <p>
+                © 2026 Kotarou Saku
+            </p>
+
+            <p>
+                Last updated: October 2026
+            </p>
+
+        </div>
+    </footer>
+
 </body>
+
 </html>
